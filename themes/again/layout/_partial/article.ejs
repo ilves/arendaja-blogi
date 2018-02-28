@@ -1,0 +1,24 @@
+<article>
+  <h1 class="article-title">
+    <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+  </h1>
+
+  <div class="author">
+	<img src="<%- post.authors[0].avatar %>" />
+	<span class="name"><%- post.authors[0].name %></span>
+	<span class="date"><%- date(post.date, 'MMMM DD YYYY') %></span>
+  </div>
+
+  <section class="article-entry">
+    <%- post.content %>
+  </section>
+ 
+  <div class="author large">
+	<img src="<%- post.authors[0].avatar %>" />
+	<span>Autor:</span>
+	<span class="name"><%- post.authors[0].name %></span>
+	<span class="about"><%- post.authors[0].about %></span>
+  </div>
+</article>
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"55816d5ba9f8c157c91067b88","lid":"ef3c81f534"}) })</script>

@@ -1,0 +1,20 @@
+<main class="index">
+  <% page.posts.each(function(post){ %>
+    <article>
+      <h1 class="article-title">
+        <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+      </h1>
+
+      <div class="article-entry">
+        <%- post.excerpt %>
+		<a href="<%- url_for(post.path) %>" class="postShorten-excerpt_link link">Loe edasi...</a>
+      </div>
+
+      <div class="article-meta">
+        <span class="article-date"><%- date(post.date, 'MMM DD YYYY') %></span>
+      </div>
+    </article>
+  <% }) %>
+
+  <%- partial('../_widget/paginator') %>
+</main>

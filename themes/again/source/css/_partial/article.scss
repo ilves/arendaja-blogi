@@ -1,0 +1,116 @@
+main.post {
+  max-width: $main-content-width;
+  margin: 0 auto;
+  padding: $gutter;
+
+  article {
+    padding-top: $article-gutter;
+    line-height: $article-line-height;
+  }
+
+  .article-entry {
+    margin-top: 4 * $gutter;
+    
+    > h2, > h3, > h4, > h5, > h6 {
+      margin-bottom: 1rem;
+    }
+    > h2 { margin-top: 3rem; }
+    > h3 { margin-top: 2rem; }
+    > h4 { margin-top: 1.5rem; }
+
+    a {
+      color: $anchor-color;
+	  text-decoration: underline;
+    }
+
+    /* * markdown it -> anchors in config.yml */
+    a.header-anchor {
+      margin-right: .5rem;
+      display: none;
+    }
+
+    // h2 show anchor symbol
+    > h2 a.header-anchor { display: inline; }
+
+    // h3-h6 show anchor symbol only when hover
+    > h3:hover .header-anchor,
+    > h4:hover .header-anchor,
+    > h5:hover .header-anchor,
+    > h6:hover .header-anchor {
+      display: inline;
+    }
+
+    // set picture responsive
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .article-title {
+    margin: 0;
+    // font-size: 1.75rem;
+    text-align: center;
+    padding-top: $article-gutter * 2/3;
+	margin-bottom: 2rem;
+  }
+
+  .article-date {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $article-date-color;
+  }
+
+  .article-comment {
+    margin-top: 6 * $gutter;
+  }
+  
+  .author {
+	img {
+		max-width: 50px;
+		  -webkit-border-radius: 50px;
+		 -moz-border-radius: 50px;
+		  -ms-border-radius: 50px;
+			  border-radius: 50px;
+		float: left;
+		margin-right: 5px;
+	}
+	span {
+		display: block;
+		line-height: 1.3em;
+	}
+	span.name {
+		padding-top: 0.1em;
+	}
+	span.date {
+		color: $article-date-color;
+	}
+  }
+  .author.large {
+	  margin-top:3rem;
+	  span {
+		color: rgba(0, 0, 0, 0.54);
+		font-size: 1.1rem;
+	  }
+	  img {
+		max-width: 100px;
+		  -webkit-border-radius: 100px;
+		 -moz-border-radius: 100px;
+		  -ms-border-radius: 100px;
+			  border-radius: 100px;
+		float: left;
+		margin-right: 1rem;
+	  }
+	  .name {
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: rgba(0, 0, 0, 0.84);
+	  }
+	  .about {
+		color:rgba(0, 0, 0, 0.54);
+		a {
+			text-decoration:underline;
+		}
+	  }
+  }
+}
